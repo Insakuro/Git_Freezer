@@ -24,6 +24,10 @@ Freezer::Freezer(int id, int price, string name,
     GoodBasic{ id, price, name, description } {
     fillProperties(cam, 11, "color", "counry", 2);
 }
+Freezer::Freezer(int id, int price, string name, string description, int cam, int weight, string color, string country, int doors):
+    GoodBasic{ id, price, name, description }{
+    fillProperties(cam, weight, color, country, doors);
+}
 
 
 void Freezer::fillProperties(int cameras, int weight, 
