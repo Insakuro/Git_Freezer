@@ -10,5 +10,6 @@ void WorkClass::startWork() {
     static_cast<Freezer*>(universalPointer03)->toString();
     GoodBasic* universalPointer04 = new Freezer(4, 4444, "NewName", "Some description", 3);
     static_cast<Freezer*>(universalPointer04)->toString();
-
+    GoodBasic* universalPointer05 = new Freezer(4, 4444, "NewName", "Some description", 3, 333, "white", "country", 4);
+    static_cast<Freezer*>(universalPointer05)->toString();
 }
