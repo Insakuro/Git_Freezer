@@ -25,12 +25,6 @@ Freezer::Freezer(int id, int price, string name,
     fillProperties(cam, 11, "color", "counry", 2);
 }
 
-Freezer::Freezer(int id, int price, string name, 
-    string description, int cam, int weight,
-    string color, string counry, int doors) :
-    GoodBasic{ id, price, name, description } {
-    fillProperties(cam, weight, color, counry, doors);    
-}
 
 void Freezer::fillProperties(int cameras, int weight, 
     string color, string counry, int doors) {
