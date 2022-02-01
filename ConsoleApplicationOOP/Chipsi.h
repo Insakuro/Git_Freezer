@@ -18,5 +18,8 @@ public:
 	void setType(string newType);
 
 	void toString();
+
+
+
 };
 
