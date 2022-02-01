@@ -10,36 +10,84 @@
 #include "WorkClass.h"
 #include "Chipsi.h"
 
-
-
-int main()
+class GIT
 {
-    setlocale(LC_ALL, "Russian");
-    WorkClass workClass;
-    workClass.startWork();//Теперь создание всех классов производится в классе WorkClass
+private:
+    std::string _name;
+    std::string _code;
+    bool _enable;
+public:
+    std::string getName() {
+        return _name;
+    }
+    std::string getCode() {
+        return _code;
+    }
+    bool getEnable() {
+        return _enable;
+    }
+
+    void setName(std::string n) {
+        _name = n;
+    }
+
+    void setCode(std::string c) {
+        _code = c;
+    }
+
+    void setEnable(bool e) {
+        _enable = e;
+    }
+
+    GIT(std::string n, std::string c, bool e) {
+        _name = n;
+        _code = c;
+        _enable = e;
+    }
+    GIT() {
+        _name = "noname";
+        _code = "000000";
+        _enable = true;
+    }
 
 
-   //std::cout << "Hello Привет World!\n";
-   // Freezer freezer01(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
-   // Freezer* pointerFreezer01 = &freezer01;
+    void toString() {
+        cout << "toString inside GIT: name:" << getName() << " code:" << getCode() << " enable:" << getEnable() << "\n";
+    }
+};
+    int main()
+    {
+        setlocale(LC_ALL, "Russian");
+        //WorkClass workClass;
+        //workClass.startWork();//Теперь создание всех классов производится в классе WorkClass
+            
+        GIT g1;
+        g1.setName("---");
+        g1.setCode("0000022232");
+        g1.setEnable(false);
+        g1.toString();
 
-   // freezer01.printAllInfo();
-    //pointerFreezer01->printAllInfo();
-   // freezer01.toString();
-   // Software software01(1, 234, "OS Windows", "Some thing...", 2, 3);
-   // software01.toString();
-    //int array01[5] = {1,2,3,4,5};
-    //int* pointerToArray = array01;
-   // cout << pointerToArray[2];
-   // freezer01.printString(freezer01.getName());
-    //freezer01.goodsPublicFunction();
-    //Универсальный указатель
+       //std::cout << "Hello Привет World!\n";
+       // Freezer freezer01(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
+       // Freezer* pointerFreezer01 = &freezer01;
 
-    /*GoodBasic* universalPointer01 = new GoodBasic;
-    GoodBasic* universalPointer02 = new Freezer(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
-    GoodBasic* universalPointer03 = new Software(1, 234, "Soft FOR Samsung", "Very Good thing...", 2, 34);
+       // freezer01.printAllInfo();
+        //pointerFreezer01->printAllInfo();
+       // freezer01.toString();
+       // Software software01(1, 234, "OS Windows", "Some thing...", 2, 3);
+       // software01.toString();
+        //int array01[5] = {1,2,3,4,5};
+        //int* pointerToArray = array01;
+       // cout << pointerToArray[2];
+       // freezer01.printString(freezer01.getName());
+        //freezer01.goodsPublicFunction();
+        //Универсальный указатель
 
-    static_cast<GoodBasic*>(universalPointer01)->toString();
-    static_cast<GoodBasic*>(universalPointer02)->toString();
-    static_cast<GoodBasic*>(universalPointer03)->toString();*/
-}
+        /*GoodBasic* universalPointer01 = new GoodBasic;
+        GoodBasic* universalPointer02 = new Freezer(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
+        GoodBasic* universalPointer03 = new Software(1, 234, "Soft FOR Samsung", "Very Good thing...", 2, 34);
+
+        static_cast<GoodBasic*>(universalPointer01)->toString();
+        static_cast<GoodBasic*>(universalPointer02)->toString();
+        static_cast<GoodBasic*>(universalPointer03)->toString();*/
+    }
